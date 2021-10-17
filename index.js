@@ -143,10 +143,15 @@ function gameOver(){
     if(posicionActualBola[1] <= 0){
         clearInterval(timerId)
         document.removeEventListener('keydown',moverUsuario)
+        alert("Game Over!");
+        location.reload()
+
     } else if(bloques == 0){
         clearInterval(timerId)
         document.removeEventListener('keydown',moverUsuario)
+        alert("¡Felicidades, has ganado el juego!");
     }
+
 }
 
 //Funcion de cambiar la dirección.
